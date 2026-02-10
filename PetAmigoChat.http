@@ -1,0 +1,6 @@
+@PetAmigoChat_HostAddress = http://localhost:5072
+
+GET {{PetAmigoChat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
