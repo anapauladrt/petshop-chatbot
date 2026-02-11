@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>PetAmigo</title>
-    <link rel="stylesheet" href="chat.css">
-</head>
-<body>
-
+<!-- chat.html -->
 <div class="chat-toggle" onclick="toggleChat()">🐾</div>
 
 <div id="chat-box">
@@ -22,11 +14,7 @@
     </div>
 
     <div class="chat-input">
-        <input id="input" placeholder="Digite..." onkeydown="handleEnter(event)">
+        <input id="input" placeholder="Digite..." onkeydown="handleEnter(event)" />
         <button onclick="sendMessage()">➤</button>
     </div>
 </div>
-
-<script src="chat.js"></script>
-</body>
-</html>

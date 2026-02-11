@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PetShop</title>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- CSS do chat -->
+    <link rel="stylesheet" href="/chat/chat.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>🐾 PetShop</h1>
+        </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">📊 Dashboard</a>
+            <a href="#" class="nav-item">🐕 Pets</a>
+            <a href="#" class="nav-item">👥 Clientes</a>
+            <a href="#" class="nav-item">📅 Agendamentos</a>
+            <a href="#" class="nav-item">🛍️ Produtos</a>
+            <a href="#" class="nav-item">💰 Vendas</a>
+            <a href="#" class="nav-item">⚙️ Configurações</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h2>Dashboard</h2>
+                <span class="breadcrumb">Home / Dashboard</span>
+            </div>
+            <div class="header-right">
+                <span class="date" id="today">📅</span>
+                <button class="icon-btn">🔔</button>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Admin">
+                    <span>Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="dashboard-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">👥</div>
+                    <div class="stat-info">
+                        <h3>Total de Clientes</h3>
+                        <p class="stat-number">1.234</p>
+                        <span class="stat-trend positive">+12% este mês</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">🐕</div>
+                    <div class="stat-info">
+                        <h3>Pets Cadastrados</h3>
+                        <p class="stat-number">2.456</p>
+                        <span class="stat-trend positive">+8%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">📅</div>
+                    <div class="stat-info">
+                        <h3>Agendamentos Hoje</h3>
+                        <p class="stat-number">28</p>
+                        <span class="stat-trend neutral">Hoje</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">💰</div>
+                    <div class="stat-info">
+                        <h3>Receita Mensal</h3>
+                        <p class="stat-number">R$ 45.890</p>
+                        <span class="stat-trend positive">+15%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Últimos Agendamentos -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Últimos Agendamentos</h3>
+                    <a href="#" class="btn-link">Ver todos</a>
+                </div>
+                <div class="card-content">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Pet</th>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ana Paula</td>
+                                <td>Thor 🐶</td>
+                                <td>Banho</td>
+                                <td>11/02</td>
+                                <td><span class="status ok">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td>Marcos</td>
+                                <td>Luna 🐕</td>
+                                <td>Tosa</td>
+                                <td>11/02</td>
+                                <td><span class="status pending">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td>Maria Silva</td>
+                                <td>Mimi 🐈</td>
+                                <td>Consulta</td>
+                                <td>11/02</td>
+                                <td><span class="status ok">Concluído</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<!-- Chat flutuante -->
+<div id="chat-container"></div>
+<script>
+fetch("/chat/chat.html")
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById("chat-container").innerHTML = html;
+
+        // Agora o DOM do chat existe, então carregue o JS
+        const script = document.createElement("script");
+        script.src = "/chat/chat.js";
+        document.body.appendChild(script);
+    });
+</script>
+
+
+</body>
+</html>

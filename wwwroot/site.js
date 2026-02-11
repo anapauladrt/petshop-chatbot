@@ -1,4 +1,3 @@
-function toggleChat() {
-    document.getElementById("chat-box")
-        .classList.toggle("hidden");
+function toggleSiteChat() {
+    document.getElementById("chat-box").classList.toggle("open");
 }

@@ -1,5 +1,6 @@
 function toggleChat() {
-    document.getElementById("chat-box").classList.toggle("open");
+    const chatBox = document.getElementById("chat-box");
+    chatBox.classList.toggle("open");
 }
 
 async function sendMessage() {
@@ -19,7 +20,7 @@ async function sendMessage() {
     try {
         const res = await fetch("/api/chat", {
             method: "POST",
-            headers: {"Content-Type":"application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: text })
         });
 
