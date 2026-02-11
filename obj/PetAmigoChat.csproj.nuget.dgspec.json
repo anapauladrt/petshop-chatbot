@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ana/PetAmigoChat/PetAmigoChat/PetAmigoChat.csproj": {}
+    "/home/ana/petshop-chatbot/PetAmigoChat.csproj": {}
   },
   "projects": {
-    "/home/ana/PetAmigoChat/PetAmigoChat/PetAmigoChat.csproj": {
+    "/home/ana/petshop-chatbot/PetAmigoChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ana/PetAmigoChat/PetAmigoChat/PetAmigoChat.csproj",
+        "projectUniqueName": "/home/ana/petshop-chatbot/PetAmigoChat.csproj",
         "projectName": "PetAmigoChat",
-        "projectPath": "/home/ana/PetAmigoChat/PetAmigoChat/PetAmigoChat.csproj",
+        "projectPath": "/home/ana/petshop-chatbot/PetAmigoChat.csproj",
         "packagesPath": "/home/ana/.nuget/packages/",
-        "outputPath": "/home/ana/PetAmigoChat/PetAmigoChat/obj/",
+        "outputPath": "/home/ana/petshop-chatbot/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ana/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.22, )"
