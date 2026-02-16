@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetAmigoChat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e3e5a5ff2724a97ac41d0b09bb9ea0bcffdad4f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b723bf462cbe62a63c3537679bf3dee8a6a604e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetAmigoChat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetAmigoChat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
